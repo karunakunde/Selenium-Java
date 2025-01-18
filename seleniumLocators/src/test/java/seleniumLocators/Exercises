@@ -1,0 +1,20 @@
+Locate a search bar using ID and perform a search query.
+Identify a login button using class name and click it.
+Select a dropdown menu using tag name and choose an option.
+Find an element using CSS selector with direct attribute matching (e.g., [type='submit']).
+Locate a table row using XPath with positional indexing.
+Locate a dynamic element with changing IDs using XPath contains() function.
+Automate a checkbox selection using name attribute.
+Use partial link text to click on a hyperlink.
+Automate navigation through breadcrumbs using link text.
+Locate an image using CSS pseudo-classes like nth-child.
+Use XPath axes (e.g., following-sibling) to locate related elements.
+Find an element by its custom data- attribute* using CSS.
+Select multiple elements with the same class using findElements().
+Interact with an alert box after locating its trigger button by ID.
+Locate an input field using XPath with starts-with() function.
+Validate a tooltip by locating the hoverable element using CSS selectors.
+Automate file upload by locating the file input field using name.
+Find disabled elements and retrieve attributes using CSS.
+Locate a specific cell in a table using XPath indexing.
+Use relative XPath to locate elements deeply nested within a structure.
