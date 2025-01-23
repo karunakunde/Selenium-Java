@@ -1,4 +1,4 @@
-package action_n_interaction;
+ package action_n_interaction;
 
 import java.time.Duration;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FormSubmission {
+public class FormSubmission2 {
 	
 	/*
 	 * Exercise 1: Form Submission
@@ -39,19 +39,22 @@ URL:https://katalon-demo-cura.herokuapp.com/
        
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='txt-password']")));
 		WebElement password = webDriver.findElement(By.xpath("//input[@id='txt-password']"));
-       
-		username.sendKeys("John Doe");
+        username.sendKeys("John Doe");
         Thread.sleep(1000);
         password.sendKeys("ThisIsAPassword");//invalid password
         Thread.sleep(1000);
         webDriver.findElement(By.xpath("//button[@id='btn-login']")).click();
         Thread.sleep(1000);
-    
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='txt-username']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='txt-password']")));
+		password = webDriver.findElement(By.xpath("//input[@id='txt-password']"));
+
+        username = webDriver.findElement(By.xpath("//input[@id='txt-username']"));
         password.sendKeys("ThisIsNotAPassword");
         username.sendKeys("John Doe");
         Thread.sleep(1000);
+
         webDriver.findElement(By.xpath("//button[@id='btn-login']")).click();
-        
 		System.out.println(webDriver.getCurrentUrl());
 	}
 
