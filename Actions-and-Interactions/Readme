@@ -1,0 +1,10 @@
+Here are the details for each exercise:
+
+ActionsClass.java
+This exercise demonstrates the use of the Actions class to perform complex user interactions such as drag and drop, hover, and right-click. It showcases how to use the Actions class to simulate user interactions on a web page.
+
+FormSubmission2.java
+This exercise illustrates how to submit a form using Selenium WebDriver, including how to fill in form fields and click the submit button. It demonstrates how to use Selenium to automate form submission on a web page.
+
+HoverAction.java
+This exercise shows how to use the Actions class to perform a hover action on a web page, including how to move the mouse to an element and hover over it. It demonstrates how to use Selenium to automate hover interactions on a web page
