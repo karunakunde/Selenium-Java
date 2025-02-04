@@ -2,28 +2,38 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-29T21:56:12 IST" name="Default suite" finished-at="2025-01-29T21:56:12 IST" duration-ms="65">
+  <suite started-at="2025-02-04T21:50:50 IST" name="Suite" finished-at="2025-02-04T21:50:50 IST" duration-ms="63">
     <groups>
+      <group name="regression">
+        <method signature="Login2.search()[pri:0, instance:testng.Login2@470734c3]" name="search" class="testng.Login2"/>
+        <method signature="Login2.signup()[pri:0, instance:testng.Login2@470734c3]" name="signup" class="testng.Login2"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="Login2.search()[pri:0, instance:testng.Login2@470734c3]" name="search" class="testng.Login2"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2025-01-29T21:56:12 IST" name="Default test" finished-at="2025-01-29T21:56:12 IST" duration-ms="65">
-      <class name="testng.BeforeClassAfterClass">
-        <test-method is-config="true" signature="login()[pri:0, instance:testng.BeforeClassAfterClass@6e9175d8]" started-at="2025-01-29T21:56:12 IST" name="login" finished-at="2025-01-29T21:56:12 IST" duration-ms="11" status="PASS">
+    <test started-at="2025-02-04T21:50:50 IST" name="Test" finished-at="2025-02-04T21:50:50 IST" duration-ms="63">
+      <class name="testng.Login2">
+        <test-method is-config="true" signature="login(java.lang.String)[pri:0, instance:testng.Login2@470734c3]" started-at="2025-02-04T21:50:50 IST" name="login" finished-at="2025-02-04T21:50:50 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="search()[pri:1, instance:testng.BeforeClassAfterClass@6e9175d8]" started-at="2025-01-29T21:56:12 IST" name="search" finished-at="2025-01-29T21:56:12 IST" duration-ms="6" status="PASS">
+        <test-method signature="search()[pri:0, instance:testng.Login2@470734c3]" started-at="2025-02-04T21:50:50 IST" name="search" finished-at="2025-02-04T21:50:50 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method signature="advancedSearch()[pri:2, instance:testng.BeforeClassAfterClass@6e9175d8]" started-at="2025-01-29T21:56:12 IST" name="advancedSearch" finished-at="2025-01-29T21:56:12 IST" duration-ms="1" status="PASS">
+        <test-method signature="signup()[pri:0, instance:testng.Login2@470734c3]" started-at="2025-02-04T21:50:50 IST" name="signup" finished-at="2025-02-04T21:50:50 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advancedSearch -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testng.BeforeClassAfterClass@6e9175d8]" started-at="2025-01-29T21:56:12 IST" name="logout" finished-at="2025-01-29T21:56:12 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- testng.BeforeClassAfterClass -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- signup -->
+      </class> <!-- testng.Login2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
