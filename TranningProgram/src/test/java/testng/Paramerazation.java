@@ -5,14 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Login2 {
+public class Paramerazation {
 	
-	@Parameters("browser")
+	@Parameters({"browser","url"})
 	@BeforeClass	
-	void login(String br)
+	void login(String br,String url)
 	{
 		
-		System.out.println("This is login method "+br);
+		System.out.println("Browser "+br+"\nURL "+url);
 	}
 	@Test(groups="regression")
 	void signup()

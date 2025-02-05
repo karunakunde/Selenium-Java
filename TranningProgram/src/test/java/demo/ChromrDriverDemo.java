@@ -7,13 +7,8 @@ public class ChromrDriverDemo extends ChrommiumDriverDemo {
 	}
 	public static void main(String[] args) {
 		
-		WebDriverDemo r =new ChromrDriverDemo();
-		r.a=80;
-		JavaScriptExecutorDemo j = (JavaScriptExecutorDemo)r;
-		j.takeScreenshot();
+		TakeScreenShotDemo r =new ChromrDriverDemo();
 		
-		WebDriverDemo w = (WebDriverDemo)j;
-		System.out.println("vlaue of a after downcasting"+w.a);
 		
 		
 	
