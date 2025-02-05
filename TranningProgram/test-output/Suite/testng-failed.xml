@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="Edge" value="Chrome"/>
-  <parameter name="url" value="https://katalon-demo-cura.herokuapp.com/"/>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://katalon-demo-cura.herokuapp.com/"/>
     <classes>
-      <class name="datadriventesting.LoginTest">
+      <class name="datadriventesting.LoginTestUsingEXCEL">
         <methods>
-          <include name="testLogin"/>
+          <include name="loginTest" invocation-numbers="0 1 2"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- datadriventesting.LoginTest -->
+      </class> <!-- datadriventesting.LoginTestUsingEXCEL -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
