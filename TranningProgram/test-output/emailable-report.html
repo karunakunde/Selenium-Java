@@ -9,19 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">16,197</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">30,757</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">assertion.HardAssertion</td><td><a href="#m0">checkUrl</a></td><td rowspan="1">1738841577262</td><td rowspan="1">4019</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">assertion.HardAssertion</td><td><a href="#m1">checkMakeAppointemnt</a></td><td rowspan="1">1738841586375</td><td rowspan="1">1</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">assertion.HardAssertion</td><td><a href="#m2">checkHeadingDisplayed</a></td><td rowspan="1">1738841582876</td><td rowspan="1">3492</td></tr><tr class="passedeven"><td><a href="#m3">checkWindowTitle</a></td><td rowspan="1">1738841572385</td><td rowspan="1">3090</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">assertion.HardAssertion</td><td><a href="#m0">checkUrl</a></td><td rowspan="1">1738867454744</td><td rowspan="1">4022</td></tr><tr class="failedodd"><td rowspan="1">assertion.SoftAssertionDemo</td><td><a href="#m1">checkUrl</a></td><td rowspan="1">1738867469160</td><td rowspan="1">3013</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">assertion.HardAssertion</td><td><a href="#m2">checkMakeAppointemnt</a></td><td rowspan="1">1738867463211</td><td rowspan="1">1</td></tr><tr class="skippedodd"><td rowspan="1">assertion.SoftAssertionDemo</td><td><a href="#m3">checkMakeAppointemnt</a></td><td rowspan="1">1738867476370</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">assertion.HardAssertion</td><td><a href="#m4">checkHeadingDisplayed</a></td><td rowspan="1">1738867460043</td><td rowspan="1">3164</td></tr><tr class="passedeven"><td><a href="#m5">checkWindowTitle</a></td><td rowspan="1">1738867449917</td><td rowspan="1">3610</td></tr><tr class="passedodd"><td rowspan="2">assertion.SoftAssertionDemo</td><td><a href="#m6">checkHeadingDisplayed</a></td><td rowspan="1">1738867473531</td><td rowspan="1">2836</td></tr><tr class="passedodd"><td><a href="#m7">checkWindowTitle</a></td><td rowspan="1">1738867464515</td><td rowspan="1">3318</td></tr></tbody>
 </table>
 <h2>Test</h2><h3 id="m0">assertion.HardAssertion#checkUrl</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]
 	at assertion.HardAssertion.checkUrl(HardAssertion.java:64)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">assertion.HardAssertion#checkMakeAppointemnt</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@6340e5f0 depends on not successfully finished methods 
-[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@6340e5f0]
+<h3 id="m1">assertion.SoftAssertionDemo#checkUrl</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]
+	at assertion.SoftAssertionDemo.checkUrl(SoftAssertionDemo.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">assertion.HardAssertion#checkMakeAppointemnt</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@45099dd3 depends on not successfully finished methods 
+[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@45099dd3]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">assertion.HardAssertion#checkHeadingDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">assertion.HardAssertion#checkWindowTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">assertion.SoftAssertionDemo#checkMakeAppointemnt</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method assertion.SoftAssertionDemo.checkMakeAppointemnt() on instance assertion.SoftAssertionDemo@117159c0 depends on not successfully finished methods 
+[assertion.SoftAssertionDemo.checkUrl() on instance assertion.SoftAssertionDemo@117159c0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">assertion.HardAssertion#checkHeadingDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">assertion.HardAssertion#checkWindowTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">assertion.SoftAssertionDemo#checkHeadingDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">assertion.SoftAssertionDemo#checkWindowTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

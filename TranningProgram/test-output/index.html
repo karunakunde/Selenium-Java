@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  1 skipped,  2 passed</span>
+                    <span class="method-stats">8 methods, 2 failed,  2 skipped,  4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="assertion.HardAssertion" class="method navigator-link" hash-for-method="checkUrl">checkUrl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="assertion.SoftAssertionDemo" class="method navigator-link" hash-for-method="checkUrl">checkUrl</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -118,6 +123,11 @@
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="assertion.HardAssertion" class="method navigator-link" hash-for-method="checkMakeAppointemnt">checkMakeAppointemnt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="assertion.SoftAssertionDemo" class="method navigator-link" hash-for-method="checkMakeAppointemnt">checkMakeAppointemnt</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -136,7 +146,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="assertion.SoftAssertionDemo" class="method navigator-link" hash-for-method="checkHeadingDisplayed">checkHeadingDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="assertion.HardAssertion" class="method navigator-link" hash-for-method="checkWindowTitle">checkWindowTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="assertion.SoftAssertionDemo" class="method navigator-link" hash-for-method="checkWindowTitle">checkWindowTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -151,6 +171,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">assertion.SoftAssertionDemo</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUrl">
+                  </a> <!-- checkUrl -->
+                  <span class="method-name">checkUrl</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]
+	at assertion.SoftAssertionDemo.checkUrl(SoftAssertionDemo.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -174,6 +215,26 @@
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
+              <span class="class-name">assertion.SoftAssertionDemo</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMakeAppointemnt">
+                  </a> <!-- checkMakeAppointemnt -->
+                  <span class="method-name">checkMakeAppointemnt</span>
+                  <div class="stack-trace">java.lang.Throwable: Method assertion.SoftAssertionDemo.checkMakeAppointemnt() on instance assertion.SoftAssertionDemo@117159c0 depends on not successfully finished methods 
+[assertion.SoftAssertionDemo.checkUrl() on instance assertion.SoftAssertionDemo@117159c0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">assertion.HardAssertion</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -182,8 +243,8 @@
                   <a name="checkMakeAppointemnt">
                   </a> <!-- checkMakeAppointemnt -->
                   <span class="method-name">checkMakeAppointemnt</span>
-                  <div class="stack-trace">java.lang.Throwable: Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@6340e5f0 depends on not successfully finished methods 
-[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@6340e5f0]
+                  <div class="stack-trace">java.lang.Throwable: Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@45099dd3 depends on not successfully finished methods 
+[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@45099dd3]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames
 </div> <!-- stack-trace -->
@@ -191,6 +252,28 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">assertion.SoftAssertionDemo</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkHeadingDisplayed">
+                  </a> <!-- checkHeadingDisplayed -->
+                  <span class="method-name">checkHeadingDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWindowTitle">
+                  </a> <!-- checkWindowTitle -->
+                  <span class="method-name">checkWindowTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -223,11 +306,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
-  &lt;parameter name=&quot;url&quot; value=&quot;https://katalon-demo-cura.herokuapp.com/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://katalon-demo-cura.herokuapp.com/&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;assertion.HardAssertion&quot;/&gt;
+      &lt;class name=&quot;assertion.SoftAssertionDemo&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -241,7 +325,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -267,28 +351,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkUrl')
 data.setCell(0, 2, 'assertion.HardAssertion')
-data.setCell(0, 3, 4019);
+data.setCell(0, 3, 4022);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkHeadingDisplayed')
+data.setCell(1, 1, 'checkWindowTitle')
 data.setCell(1, 2, 'assertion.HardAssertion')
-data.setCell(1, 3, 3492);
+data.setCell(1, 3, 3610);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'checkWindowTitle')
-data.setCell(2, 2, 'assertion.HardAssertion')
-data.setCell(2, 3, 3090);
+data.setCell(2, 2, 'assertion.SoftAssertionDemo')
+data.setCell(2, 3, 3318);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkMakeAppointemnt')
+data.setCell(3, 1, 'checkHeadingDisplayed')
 data.setCell(3, 2, 'assertion.HardAssertion')
-data.setCell(3, 3, 1);
+data.setCell(3, 3, 3164);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'checkUrl')
+data.setCell(4, 2, 'assertion.SoftAssertionDemo')
+data.setCell(4, 3, 3013);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkHeadingDisplayed')
+data.setCell(5, 2, 'assertion.SoftAssertionDemo')
+data.setCell(5, 3, 2836);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkMakeAppointemnt')
+data.setCell(6, 2, 'assertion.HardAssertion')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checkMakeAppointemnt')
+data.setCell(7, 2, 'assertion.SoftAssertionDemo')
+data.setCell(7, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -321,25 +421,54 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkWindowTitle</span>
-                <span class="method-start">2165 ms</span>
+                <span class="method-start">4263 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome, https://katalon-demo-cura.herokuapp.com/)</span>
-                <span class="method-start">5263 ms</span>
+                <span class="method-start">7877 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">checkUrl</span>
-                <span class="method-start">7042 ms</span>
+                <span class="method-start">9090 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome, https://katalon-demo-cura.herokuapp.com/)</span>
-                <span class="method-start">11071 ms</span>
+                <span class="method-start">13116 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkHeadingDisplayed</span>
-                <span class="method-start">12656 ms</span>
+                <span class="method-start">14389 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">assertion.SoftAssertionDemo</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization(Chrome, https://katalon-demo-cura.herokuapp.com/)</span>
+                <span class="method-start">17563 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWindowTitle</span>
+                <span class="method-start">18861 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization(Chrome, https://katalon-demo-cura.herokuapp.com/)</span>
+                <span class="method-start">22181 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkUrl</span>
+                <span class="method-start">23506 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization(Chrome, https://katalon-demo-cura.herokuapp.com/)</span>
+                <span class="method-start">26522 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkHeadingDisplayed</span>
+                <span class="method-start">27877 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
