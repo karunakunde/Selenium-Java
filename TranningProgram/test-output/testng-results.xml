@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="4" failed="2" skipped="2">
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-07T00:14:05 IST" name="Suite" finished-at="2025-02-07T00:14:36 IST" duration-ms="30757">
+  <suite started-at="2025-02-07T01:50:38 IST" name="Suite" finished-at="2025-02-07T01:50:55 IST" duration-ms="17473">
     <groups>
     </groups>
-    <test started-at="2025-02-07T00:14:05 IST" name="Test" finished-at="2025-02-07T00:14:36 IST" duration-ms="30757">
-      <class name="assertion.SoftAssertionDemo">
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:23 IST" name="initialization" finished-at="2025-02-07T00:14:24 IST" duration-ms="1298" status="PASS">
+    <test started-at="2025-02-07T01:50:38 IST" name="Test" finished-at="2025-02-07T01:50:55 IST" duration-ms="17473">
+      <class name="testlistener.LoginTest">
+        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:38 IST" name="initialization" finished-at="2025-02-07T01:50:40 IST" duration-ms="2037" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="checkWindowTitle()[pri:0, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:24 IST" name="checkWindowTitle" finished-at="2025-02-07T00:14:27 IST" duration-ms="3318" status="PASS">
+        <test-method signature="checkWindowTitle()[pri:0, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:40 IST" name="checkWindowTitle" finished-at="2025-02-07T01:50:44 IST" duration-ms="4037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkWindowTitle -->
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:27 IST" name="initialization" finished-at="2025-02-07T00:14:29 IST" duration-ms="1325" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:44 IST" name="initialization" finished-at="2025-02-07T01:50:45 IST" duration-ms="1432" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,145 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="checkUrl()[pri:2, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:29 IST" name="checkUrl" finished-at="2025-02-07T00:14:32 IST" duration-ms="3013" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at assertion.SoftAssertionDemo.checkUrl(SoftAssertionDemo.java:71)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkUrl -->
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:32 IST" name="initialization" finished-at="2025-02-07T00:14:33 IST" duration-ms="1355" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://katalon-demo-cura.herokuapp.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method signature="checkHeadingDisplayed()[pri:3, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:33 IST" name="checkHeadingDisplayed" finished-at="2025-02-07T00:14:36 IST" duration-ms="2836" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkHeadingDisplayed -->
-        <test-method signature="checkMakeAppointemnt()[pri:4, instance:assertion.SoftAssertionDemo@117159c0]" started-at="2025-02-07T00:14:36 IST" name="checkMakeAppointemnt" finished-at="2025-02-07T00:14:36 IST" depends-on-methods="assertion.SoftAssertionDemo.checkUrl" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method assertion.SoftAssertionDemo.checkMakeAppointemnt() on instance assertion.SoftAssertionDemo@117159c0 depends on not successfully finished methods 
-[assertion.SoftAssertionDemo.checkUrl() on instance assertion.SoftAssertionDemo@117159c0]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method assertion.SoftAssertionDemo.checkMakeAppointemnt() on instance assertion.SoftAssertionDemo@117159c0 depends on not successfully finished methods 
-[assertion.SoftAssertionDemo.checkUrl() on instance assertion.SoftAssertionDemo@117159c0]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkMakeAppointemnt -->
-      </class> <!-- assertion.SoftAssertionDemo -->
-      <class name="assertion.HardAssertion">
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:05 IST" name="initialization" finished-at="2025-02-07T00:14:09 IST" duration-ms="4262" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://katalon-demo-cura.herokuapp.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method signature="checkWindowTitle()[pri:0, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:09 IST" name="checkWindowTitle" finished-at="2025-02-07T00:14:13 IST" duration-ms="3610" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkWindowTitle -->
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:13 IST" name="initialization" finished-at="2025-02-07T00:14:14 IST" duration-ms="1213" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://katalon-demo-cura.herokuapp.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method signature="checkUrl()[pri:2, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:14 IST" name="checkUrl" finished-at="2025-02-07T00:14:18 IST" duration-ms="4022" status="FAIL">
+        <test-method signature="checkUrl()[pri:2, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:45 IST" name="checkUrl" finished-at="2025-02-07T01:50:49 IST" duration-ms="3474" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [https://katalon-demo-cura.herokuapp.com/] but found [http://www.facebook.com]]]>
@@ -194,7 +56,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at assertion.HardAssertion.checkUrl(HardAssertion.java:64)
+at testlistener.LoginTest.checkUrl(LoginTest.java:66)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -229,7 +91,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUrl -->
-        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:18 IST" name="initialization" finished-at="2025-02-07T00:14:20 IST" duration-ms="1272" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String,java.lang.String)[pri:0, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:49 IST" name="initialization" finished-at="2025-02-07T01:50:50 IST" duration-ms="1805" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,19 +107,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="checkHeadingDisplayed()[pri:3, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:20 IST" name="checkHeadingDisplayed" finished-at="2025-02-07T00:14:23 IST" duration-ms="3164" status="PASS">
+        <test-method signature="checkHeadingDisplayed()[pri:3, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:50 IST" name="checkHeadingDisplayed" finished-at="2025-02-07T01:50:55 IST" duration-ms="4633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHeadingDisplayed -->
-        <test-method signature="checkMakeAppointemnt()[pri:4, instance:assertion.HardAssertion@45099dd3]" started-at="2025-02-07T00:14:23 IST" name="checkMakeAppointemnt" finished-at="2025-02-07T00:14:23 IST" depends-on-methods="assertion.HardAssertion.checkUrl" duration-ms="1" status="SKIP">
+        <test-method signature="checkMakeAppointemnt()[pri:4, instance:testlistener.LoginTest@45099dd3]" started-at="2025-02-07T01:50:55 IST" name="checkMakeAppointemnt" finished-at="2025-02-07T01:50:55 IST" depends-on-methods="testlistener.LoginTest.checkUrl" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@45099dd3 depends on not successfully finished methods 
-[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@45099dd3]]]>
+              <![CDATA[Method testlistener.LoginTest.checkMakeAppointemnt() on instance testlistener.LoginTest@45099dd3 depends on not successfully finished methods 
+[testlistener.LoginTest.checkUrl() on instance testlistener.LoginTest@45099dd3]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method assertion.HardAssertion.checkMakeAppointemnt() on instance assertion.HardAssertion@45099dd3 depends on not successfully finished methods 
-[assertion.HardAssertion.checkUrl() on instance assertion.HardAssertion@45099dd3]
+              <![CDATA[java.lang.Throwable: Method testlistener.LoginTest.checkMakeAppointemnt() on instance testlistener.LoginTest@45099dd3 depends on not successfully finished methods 
+[testlistener.LoginTest.checkUrl() on instance testlistener.LoginTest@45099dd3]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -283,7 +145,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMakeAppointemnt -->
-      </class> <!-- assertion.HardAssertion -->
+      </class> <!-- testlistener.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

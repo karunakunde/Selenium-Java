@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.Login2">
+      <class name="testlistener.LoginTest">
         <methods>
-          <include name="signup"/>
-          <include name="login"/>
-          <include name="search"/>
+          <include name="checkHeadingDisplayed"/>
+          <include name="checkUrl"/>
+          <include name="checkMakeAppointemnt"/>
+          <include name="initialization"/>
+          <include name="checkWindowTitle"/>
         </methods>
-      </class> <!-- testng.Login2 -->
+      </class> <!-- testlistener.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
