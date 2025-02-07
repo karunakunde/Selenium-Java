@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testlistener.LoginTest">
+      <class name="page_object_model.TestClass">
         <methods>
-          <include name="checkHeadingDisplayed"/>
-          <include name="checkUrl"/>
-          <include name="checkMakeAppointemnt"/>
-          <include name="initialization"/>
-          <include name="checkWindowTitle"/>
+          <include name="setup"/>
+          <include name="testCase"/>
         </methods>
-      </class> <!-- testlistener.LoginTest -->
+      </class> <!-- page_object_model.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
