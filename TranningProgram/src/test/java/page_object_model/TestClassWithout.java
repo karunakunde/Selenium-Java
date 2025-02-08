@@ -2,21 +2,23 @@ package page_object_model;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestClass {
+public class TestClassWithout {
 	WebDriver driver;
-	WithoutPageFactory wpf;
+	WithPageFactory wpf;
 	
 	@BeforeClass
 	void setup()
 	{
 		System.out.println("setup methos");
-		
 		driver = new ChromeDriver();
-		System.out.println("driver : "+driver);
 		driver.get("https://seleniumbase.io/demo_page");
+		
 
 	}
 	
@@ -24,15 +26,22 @@ public class TestClass {
 	@Test
 	void testCase() throws InterruptedException
 	{
-		wpf = new WithoutPageFactory(this.driver);
+		wpf = new WithPageFactory(this.driver);
+
         Thread.sleep(3000);
-		wpf.enterInputText("automation testing input box");
-		wpf.enterTextIntoTextArea("Text area box");
-		wpf.clickButton();
-		wpf.checkBox();
+		wpf.setInputText("automation testing input box");
+		wpf.setTestArea("Text area box");
+		wpf.checkUncheckbox();
 		//System.out.println(wpf.inputText.getText());
+		wpf.clickOnButton();
 		Thread.sleep(3000);
-		driver.close();
+		Assert.assertEquals(wpf.getButtonText(),"Purple button");
+	}
+	
+	@AfterClass
+	void tearDown()
+	{
+		driver.quit();
 	}
 
 }

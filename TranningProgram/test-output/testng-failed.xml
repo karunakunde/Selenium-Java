@@ -3,12 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="page_object_model.TestClass">
+      <class name="page_object_model.TestClassWithout">
         <methods>
           <include name="setup"/>
+          <include name="tearDown"/>
           <include name="testCase"/>
         </methods>
-      </class> <!-- page_object_model.TestClass -->
+      </class> <!-- page_object_model.TestClassWithout -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
