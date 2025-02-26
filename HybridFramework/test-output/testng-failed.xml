@@ -5,10 +5,9 @@
     <classes>
       <class name="base.InventoryTest">
         <methods>
+          <include name="verfifyZToAFilter"/>
           <include name="setup"/>
-          <include name="verifyURLOfApplication"/>
           <include name="closeBrowser"/>
-          <include name="verifyHeaderTitle"/>
         </methods>
       </class> <!-- base.InventoryTest -->
     </classes>

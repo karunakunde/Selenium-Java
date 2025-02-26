@@ -1,4 +1,6 @@
-package base;
+package testcases;
+
+import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -6,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.Inventory;
 import pages.Login;
 import testbase.TestBase;
 
@@ -13,7 +16,7 @@ public class LoginTest extends TestBase{
 	Login lg;
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws IOException {
 		initialization();
 		lg = new Login();
 		
@@ -34,13 +37,14 @@ public class LoginTest extends TestBase{
 	}
 	
 	@Test
-	public void logintoapplication() {
+	public void logintoapplication() throws IOException {
 		String expUrl = "https://www.saucedemo.com/inventory.html";
 		String actUrl = lg.logintoapplication();
 		Assert.assertEquals(actUrl, expUrl);
 		Reporter.log("Login successful--"+actUrl);
 	}
 
+	
 	@AfterMethod
 	public void closeBrowser()
 	{
