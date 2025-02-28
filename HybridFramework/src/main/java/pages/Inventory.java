@@ -109,6 +109,10 @@ public class Inventory extends TestBase {
 	    
 	}
 	
+	public void clickOnCart()
+	{
+		cartLink.click();
+	}
 	
 	public void addAll6ProductsToCart()
 	{

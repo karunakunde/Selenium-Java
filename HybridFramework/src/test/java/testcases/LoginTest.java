@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,7 @@ import pages.Inventory;
 import pages.Login;
 import testbase.TestBase;
 import utility.ReadData;
+import utility.Screenshot;
 
 public class LoginTest extends TestBase{
 	Login lg;
@@ -48,8 +50,10 @@ public class LoginTest extends TestBase{
 
 	
 	@AfterMethod
-	public void closeBrowser()
+	public void closeBrowser(ITestResult it) throws IOException
 	{
+		if(it.FAILURE==it.getStatus())
+			Screenshot.takeScreenshot(it.getName());
 		driver.close();
 	}
 }

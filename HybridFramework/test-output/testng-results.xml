@@ -1,55 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Login successful--https://www.saucedemo.com/inventory.html]]>
+      <![CDATA[Continue shpooing button working as expected]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-27T21:44:18 IST" name="Default suite" finished-at="2025-02-27T21:44:28 IST" duration-ms="9779">
+  <suite started-at="2025-02-28T18:16:35 IST" name="Default suite" finished-at="2025-02-28T18:16:47 IST" duration-ms="12160">
     <groups>
     </groups>
-    <test started-at="2025-02-27T21:44:18 IST" name="Default test" finished-at="2025-02-27T21:44:28 IST" duration-ms="9779">
-      <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:18 IST" name="setup" finished-at="2025-02-27T21:44:22 IST" duration-ms="3461" status="PASS">
+    <test started-at="2025-02-28T18:16:35 IST" name="Default test" finished-at="2025-02-28T18:16:47 IST" duration-ms="12160">
+      <class name="testcases.CartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.CartTest@5f049ea1]" started-at="2025-02-28T18:16:35 IST" name="setup" finished-at="2025-02-28T18:16:44 IST" duration-ms="8858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintoapplication()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:22 IST" name="logintoapplication" finished-at="2025-02-27T21:44:23 IST" duration-ms="843" status="PASS">
+        <test-method signature="verifyContinueShoppingBtn()[pri:0, instance:testcases.CartTest@5f049ea1]" started-at="2025-02-28T18:16:44 IST" name="verifyContinueShoppingBtn" finished-at="2025-02-28T18:16:47 IST" duration-ms="3108" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Login successful--https://www.saucedemo.com/inventory.html]]>
+              <![CDATA[Continue shpooing button working as expected]]>
             </line>
           </reporter-output>
-        </test-method> <!-- logintoapplication -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:23 IST" name="closeBrowser" finished-at="2025-02-27T21:44:23 IST" duration-ms="140" status="PASS">
+        </test-method> <!-- verifyContinueShoppingBtn -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.CartTest@5f049ea1]" started-at="2025-02-28T18:16:47 IST" name="closeBrowser" finished-at="2025-02-28T18:16:47 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:23 IST" name="setup" finished-at="2025-02-27T21:44:25 IST" duration-ms="2440" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyTitleOfApplication()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:25 IST" name="verifyTitleOfApplication" finished-at="2025-02-27T21:44:25 IST" duration-ms="42" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfApplication -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:25 IST" name="closeBrowser" finished-at="2025-02-27T21:44:25 IST" duration-ms="99" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:25 IST" name="setup" finished-at="2025-02-27T21:44:28 IST" duration-ms="2547" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyURLOfApplication()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:28 IST" name="verifyURLOfApplication" finished-at="2025-02-27T21:44:28 IST" duration-ms="32" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyURLOfApplication -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@909217e]" started-at="2025-02-27T21:44:28 IST" name="closeBrowser" finished-at="2025-02-27T21:44:28 IST" duration-ms="121" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testcases.LoginTest -->
+      </class> <!-- testcases.CartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
