@@ -143,7 +143,7 @@ public class InventoryTest extends TestBase{
 	private void verfifyHighToLowFilter() {
 		// TODO Auto-generated method stub
 		
-		inventory.filterByPriceLowToHigh();
+		inventory.filterByPriceHighToLow();
 
 		List<Double> actual = inventory.getProductPrices();
         List<Double> expected = new ArrayList<>(actual);
@@ -151,6 +151,18 @@ public class InventoryTest extends TestBase{
 	    Collections.reverse(expected);//expected order
 	    Assert.assertEquals(actual, expected,"Product are not in High to Low order");
 	    Reporter.log("Sorted Product(Descending): "+actual);
+	}
+	
+	@Test
+	private void removefromcartTest() {
+		// TODO Auto-generated method stub
+		inventory.removeProductFromCart();
+		String expCount="4";
+		String actCount = inventory.getCartItemCount();
+		Assert.assertEquals(actCount, expCount,"Cart count not updated or product not removed from cart");
+		Reporter.log("Total products added into the cart = "+actCount);
+
+
 	}
 	
 	@AfterMethod

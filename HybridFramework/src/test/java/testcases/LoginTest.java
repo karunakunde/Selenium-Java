@@ -2,6 +2,7 @@ package testcases;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import pages.Inventory;
 import pages.Login;
 import testbase.TestBase;
+import utility.ReadData;
 
 public class LoginTest extends TestBase{
 	Login lg;
@@ -22,23 +24,23 @@ public class LoginTest extends TestBase{
 		
 	}
 	@Test
-	public void verifyURLOfApplication() {
-		String expUrl = "https://www.saucedemo.com/";
+	public void verifyURLOfApplication() throws EncryptedDocumentException, IOException {
+		String expUrl = ReadData.readExcel(0, 0);
 		String actUrl = lg.verifyURLOfApplication();
 		Assert.assertEquals(actUrl, expUrl);
 		
 	}
 
 	@Test
-	public void verifyTitleOfApplication() {
-		String expUrl = "Swag Labs";
+	public void verifyTitleOfApplication() throws EncryptedDocumentException, IOException {
+		String expUrl = ReadData.readExcel(1, 0);
 		String actUrl = lg.verifyTitleOfApplication();
 		Assert.assertEquals(actUrl, expUrl);
 	}
 	
 	@Test
 	public void logintoapplication() throws IOException {
-		String expUrl = "https://www.saucedemo.com/inventory.html";
+		String expUrl = ReadData.readExcel(2, 0);
 		String actUrl = lg.logintoapplication();
 		Assert.assertEquals(actUrl, expUrl);
 		Reporter.log("Login successful--"+actUrl);

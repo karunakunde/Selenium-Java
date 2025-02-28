@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="base.InventoryTest">
+      <class name="testcases.InventoryTest">
         <methods>
-          <include name="verfifyZToAFilter"/>
           <include name="setup"/>
           <include name="closeBrowser"/>
+          <include name="verfifyHighToLowFilter"/>
+          <include name="removefromcartTest"/>
         </methods>
-      </class> <!-- base.InventoryTest -->
+      </class> <!-- testcases.InventoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

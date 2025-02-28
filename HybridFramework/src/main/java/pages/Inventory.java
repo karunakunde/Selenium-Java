@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import testbase.TestBase;
+import utility.HandleDropDown;
 
 public class Inventory extends TestBase {
 
@@ -38,22 +39,35 @@ public class Inventory extends TestBase {
 	
 	//products
 	@FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-backpack']")
-	private WebElement saucelabsbackpack_6;
+	private WebElement saucelabsbackpack_6;	
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-backpack']")
+	private WebElement rmSaucelabsbackpack_6;
+	
 	
 	@FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-bike-light']")
-	private WebElement saucelabsbikelight_1;
+	private WebElement saucelabsbikelight_1;	
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-bike-light']")
+	private WebElement rmSaucelabsbikelight_1;
 	
 	@FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']")
 	private WebElement saucelabsbolttshirt_2;
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-bolt-t-shirt']")
+	private WebElement rmSaucelabsbolttshirt_2;
 	
 	@FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-fleece-jacket']")
 	private WebElement saucelabsfleecejacket_3;
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-fleece-jacket']")
+	private WebElement rmsaucelabsfleecejacket_3;
 	
 	@FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-onesie']")
 	private WebElement saucelabsonesie_4;
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-onesie']")
+	private WebElement rmSaucelabsonesie_4;
 	
 	@FindBy(xpath = "//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']")
 	private WebElement allthethingstshirtred_5;
+	@FindBy(xpath = "//button[@id='remove-test.allthethings()-t-shirt-(red)']")
+	private WebElement rmAllthethingstshirtred_5;
 	
 	//social icon
 	@FindBy(xpath = "//a[text()='Twitter']")
@@ -94,6 +108,8 @@ public class Inventory extends TestBase {
 	    saucelabsfleecejacket_3.click();
 	    
 	}
+	
+	
 	public void addAll6ProductsToCart()
 	{
 		saucelabsbikelight_1.click();
@@ -104,6 +120,13 @@ public class Inventory extends TestBase {
 	    saucelabsbackpack_6.click();
 	}
 
+	public void removeProductFromCart() {
+		// TODO Auto-generated method stub
+		addAll6ProductsToCart();
+		rmAllthethingstshirtred_5.click();
+		rmSaucelabsbackpack_6.click();
+
+	}
 	public String getHeaderTitle() {
 			
 		return headerTitle.getText();
@@ -125,26 +148,23 @@ public class Inventory extends TestBase {
 	
 	public void filterNameAToZ()
 	{
-		Select filter = new Select(filterDropDown);
-		filter.selectByVisibleText("Name (A to Z)");
+	
+		HandleDropDown.applyFilter(filterDropDown,"Name (A to Z)");
 	}
 	
 	public void filterNameZToA()
 	{
-		Select filter = new Select(filterDropDown);
-		filter.selectByVisibleText("Name (Z to A)");
+		HandleDropDown.applyFilter(filterDropDown,"Name (Z to A)");
 	}
 		
 	public void filterByPriceLowToHigh()
 	{
-		Select filter = new Select(filterDropDown);
-		filter.selectByVisibleText("Price (low to high)");
+		HandleDropDown.applyFilter(filterDropDown,"Price (low to high)");
 	}
 	
 	public void filterByPriceHighToLow()
 	{
-		Select filter = new Select(filterDropDown);
-		filter.selectByVisibleText("Price (high to low)");
+		HandleDropDown.applyFilter(filterDropDown,"Price (high to low)");
 	}
 	
 	public boolean isTwitterIconPresent() {
