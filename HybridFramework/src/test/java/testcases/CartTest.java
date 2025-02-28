@@ -67,6 +67,49 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(actual, expected,"Continue shpooing button not working as expected");
 		Reporter.log("Continue shpooing button working as expected");
 	}
+	
+	@Test(priority = 1)
+	public void verifyAllItemsMenu() throws InterruptedException {
+		cartPage.clickOnHamburgerBtn();
+		Thread.sleep(3000);
+        cartPage.clickOnAllItems();
+		String actual = "https://www.saucedemo.com/inventory.html";
+		String expected = cartPage.getApplicationUrl();
+		Assert.assertEquals(actual, expected,"All Items Menu not working");
+		Reporter.log("All Items Menu working as expected");
+	}
+	
+	@Test(priority = 2)
+	public void verifyAboutMenu() throws InterruptedException {
+		cartPage.clickOnHamburgerBtn();
+		Thread.sleep(3000);
+		cartPage.clickOnAbout();
+		String actual = "https://saucelabs.com/";
+		String expected = cartPage.getApplicationUrl();
+		Assert.assertEquals(actual, expected,"About Menu not working as expected");
+		Reporter.log("About menu working as expected");
+	}
+	@Test(priority = 3)
+	public void verifyLogoutMenu() throws InterruptedException {
+		cartPage.clickOnHamburgerBtn();
+		Thread.sleep(3000);
+		cartPage.clickOnLogout();
+		String actual = "https://www.saucedemo.com/";
+		String expected = cartPage.getApplicationUrl();
+		Assert.assertEquals(actual, expected,"Logout Menu not working as expected");
+		Reporter.log("Logout menu working as expected");
+	}
+	
+	@Test(priority = 4)
+	public void verifyResetAppMenu() throws InterruptedException {
+		cartPage.clickOnHamburgerBtn();
+		Thread.sleep(3000);
+		cartPage.clickOnResetState();
+		String actual = "https://www.saucedemo.com/cart.html";
+		String expected = cartPage.getApplicationUrl();
+		Assert.assertEquals(actual, expected,"Reset Menu not working as expected");
+		Reporter.log("Reset menu working as expected");
+	}
 	@AfterMethod
 	public void closeBrowser()
 	{

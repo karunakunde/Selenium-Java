@@ -5,8 +5,10 @@
     <classes>
       <class name="testcases.CartTest">
         <methods>
+          <include name="verifyContinueShoppingBtn"/>
+          <include name="verifyAllItemsMenu"/>
+          <include name="verifyLogoutMenu"/>
           <include name="closeBrowser"/>
-          <include name="verifyCheckoutBtn"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcases.CartTest -->
