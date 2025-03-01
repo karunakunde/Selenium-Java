@@ -12,7 +12,7 @@ import testbase.TestBase;
 
 public class CartPage extends TestBase {
 	
-	@FindBy(xpath = "//span[@id='shopping_cart_badge']")
+	@FindBy(xpath = "//span[@class='shopping_cart_badge']")
 	WebElement cartCount;
 	
 	@FindBy(xpath = "//div[@class='app_logo']")
@@ -42,12 +42,28 @@ public class CartPage extends TestBase {
 	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
 	WebElement logoutMenulink;
 	
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-backpack']")
+	WebElement rmsaucelabsbackpack_1;
+	
+	@FindBy(xpath = "//button[@id='remove-sauce-labs-bike-light']")
+	WebElement rmsaucelabsb_2;
+	
+	@FindBy(xpath = "//a[@id='item_0_title_link")
+	WebElement sauceLabBikeLight;
+	
+		
+	@FindBy(xpath = "//a[@id='item_1_title_link']")
+	WebElement sauceLabBoltTshirt;
+	//https://www.saucedemo.com/inventory-item.html?id=1
+	
+	
+	
 	Actions action;
 	
 	
 	public CartPage() {
 		PageFactory.initElements(driver, this);
-		action = new Actions(driver);
+		//action = new Actions(driver);
 
 	}
 	public String getApplicationUrl()
@@ -100,5 +116,20 @@ public class CartPage extends TestBase {
 	public void continueShoppingBtn() {
 		// TODO Auto-generated method stub
        continueShoppBtn.click();
+	}
+	
+	public void clickOnsauceLabBikeLight()
+	{
+		sauceLabBikeLight.click();
+	}
+	public void removeTwoProducts() {
+		// TODO Auto-generated method stub
+		rmsaucelabsb_2.click();
+		rmsaucelabsbackpack_1.click();
+
+	}
+	public String getCartCount()
+	{
+		return cartCount.getText();
 	}
 }

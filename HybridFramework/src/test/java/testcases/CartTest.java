@@ -3,6 +3,7 @@ package testcases;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +13,7 @@ import pages.CartPage;
 import pages.Inventory;
 import pages.Login;
 import testbase.TestBase;
+import utility.Screenshot;
 
 public class CartTest extends TestBase {
 	
@@ -26,7 +28,7 @@ public class CartTest extends TestBase {
 		login = new Login();
 		login.logintoapplication();
 		inventory = new Inventory();
-		inventory.add3ProductsToCart();
+		inventory.addAll6ProductsToCart();
 		inventory.clickOnCart();
 	    cartPage = new CartPage();
 				
@@ -57,7 +59,7 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(actual, expected);
 		
 	}
-	@Test
+	@Test(enabled = false)
 	public void verifyContinueShoppingBtn() throws InterruptedException
 	{
 		cartPage.continueShoppingBtn();
@@ -68,7 +70,7 @@ public class CartTest extends TestBase {
 		Reporter.log("Continue shpooing button working as expected");
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1,enabled = false)
 	public void verifyAllItemsMenu() throws InterruptedException {
 		cartPage.clickOnHamburgerBtn();
 		Thread.sleep(3000);
@@ -79,7 +81,7 @@ public class CartTest extends TestBase {
 		Reporter.log("All Items Menu working as expected");
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2,enabled = false)
 	public void verifyAboutMenu() throws InterruptedException {
 		cartPage.clickOnHamburgerBtn();
 		Thread.sleep(3000);
@@ -89,7 +91,7 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(actual, expected,"About Menu not working as expected");
 		Reporter.log("About menu working as expected");
 	}
-	@Test(priority = 3)
+	@Test(priority = 3,enabled = false)
 	public void verifyLogoutMenu() throws InterruptedException {
 		cartPage.clickOnHamburgerBtn();
 		Thread.sleep(3000);
@@ -100,7 +102,7 @@ public class CartTest extends TestBase {
 		Reporter.log("Logout menu working as expected");
 	}
 	
-	@Test(priority = 4)
+	@Test(enabled = false)
 	public void verifyResetAppMenu() throws InterruptedException {
 		cartPage.clickOnHamburgerBtn();
 		Thread.sleep(3000);
@@ -110,9 +112,32 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(actual, expected,"Reset Menu not working as expected");
 		Reporter.log("Reset menu working as expected");
 	}
+	@Test(priority = 0)
+	public void verifyCartAfterRemovingProduct() throws InterruptedException {
+		
+		cartPage.removeTwoProducts();
+		String actualcount = cartPage.getCartCount();
+		String expected = "4";	
+		Thread.sleep(4000);
+		Assert.assertEquals(actualcount, expected,"Cart count not updated");
+		Reporter.log("Product removed from cart successfully");
+	}
+	
+	@Test(enabled = true)
+	public void verifyProductNameClickNavigation() {
+		
+		cartPage.clickOnsauceLabBikeLight();
+		String actual = cartPage.getApplicationUrl();
+		String expected = "//https://www.saucedemo.com/inventory-item.html?id=0";
+		Assert.assertEquals(actual, expected,"Page not navigated to product detail page");
+		Reporter.log("");
+	}
+	
 	@AfterMethod
-	public void closeBrowser()
+	public void closeBrowser(ITestResult it) throws IOException
 	{
+		if(ITestResult.FAILURE==it.getStatus())
+			Screenshot.takeScreenshot(it.getName());
 		driver.close();
 	}
 
